@@ -1,0 +1,18 @@
+[
+  {
+    "username": "Mark",
+    "secretCode": "0000",
+    "role": "admin"
+  },
+  {
+    "username": "Jojo",
+    "secretCode": "0000",
+    "role": "user"
+  },
+  {
+    "username": "Toto",
+    "secretCode": "0000",
+    "role": "user"
+  }
+]
+
