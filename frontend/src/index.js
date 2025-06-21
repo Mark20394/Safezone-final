@@ -2,6 +2,15 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import logo from "./logo.png"; // Put logo.png in /frontend folder
 import './index.css';
+import AdminShopManager from "./components/AdminShopManager";
+import Dashboard from "./components/Dashboard";
+import Login from "./components/Login";
+import MiniGames from "./components/MiniGames";
+import Shop from "./components/Shop";
+import StockMarket from "./components/StockMarket";
+import TaxSeasons from "./components/TaxSeasons";
+import TransactionHistory from "./components/TransactionHistory";
+
 
 const API = "https://safezone-final.onrender.com/api"; // Change this to deployed backend URL
 
