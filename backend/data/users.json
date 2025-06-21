@@ -1,17 +1,17 @@
 [
   {
     "username": "Mark",
-    "secretCode": "0000",
+    "secretCode": "2008",
     "role": "admin"
   },
   {
     "username": "Jojo",
-    "secretCode": "0000",
+    "secretCode": "2014",
     "role": "user"
   },
   {
     "username": "Toto",
-    "secretCode": "0000",
+    "secretCode": "2016",
     "role": "user"
   }
 ]
