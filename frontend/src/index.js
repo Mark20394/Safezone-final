@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import logo from "./logo.png"; // Put logo.png in /frontend folder
 
-const API = "http://localhost:5000/api"; // Change this to deployed backend URL
+const API = "https://safezone-final.onrender.com"; // Change this to deployed backend URL
 
 // Utility to format currency
 const formatCurrency = (num) => `$${num.toFixed(2)}`;
