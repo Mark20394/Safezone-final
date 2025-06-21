@@ -1,12 +1,72 @@
 [
-  { "symbol": "SAFE", "name": "SafeZone Corp", "price": 100, "history": [100] },
-  { "symbol": "BANK", "name": "Banking Inc", "price": 120, "history": [120] },
-  { "symbol": "TECH", "name": "Tech Solutions", "price": 150, "history": [150] },
-  { "symbol": "FOOD", "name": "Foodies Ltd", "price": 80, "history": [80] },
-  { "symbol": "AUTO", "name": "AutoDrive", "price": 110, "history": [110] },
-  { "symbol": "ENERGY", "name": "Green Energy Co", "price": 90, "history": [90] },
-  { "symbol": "MED", "name": "MediCare Ltd", "price": 130, "history": [130] },
-  { "symbol": "BUILD", "name": "BuildStrong", "price": 70, "history": [70] },
-  { "symbol": "CLOTH", "name": "Clothify", "price": 60, "history": [60] },
-  { "symbol": "TRVL", "name": "TravelNow", "price": 95, "history": [95] }
+  {
+    "symbol": "SAFE",
+    "name": "SafeZone Corp",
+    "price": 100,
+    "history": [100],
+    "holdings": { "Mark": 0, "Jojo": 0, "Toto": 0 }
+  },
+  {
+    "symbol": "BANK",
+    "name": "Banking Inc",
+    "price": 120,
+    "history": [120],
+    "holdings": { "Mark": 0, "Jojo": 0, "Toto": 0 }
+  },
+  {
+    "symbol": "TECH",
+    "name": "Tech Solutions",
+    "price": 150,
+    "history": [150],
+    "holdings": { "Mark": 0, "Jojo": 0, "Toto": 0 }
+  },
+  {
+    "symbol": "FOOD",
+    "name": "Foodies Ltd",
+    "price": 80,
+    "history": [80],
+    "holdings": { "Mark": 0, "Jojo": 0, "Toto": 0 }
+  },
+  {
+    "symbol": "AUTO",
+    "name": "AutoDrive",
+    "price": 110,
+    "history": [110],
+    "holdings": { "Mark": 0, "Jojo": 0, "Toto": 0 }
+  },
+  {
+    "symbol": "ENERGY",
+    "name": "Green Energy Co",
+    "price": 90,
+    "history": [90],
+    "holdings": { "Mark": 0, "Jojo": 0, "Toto": 0 }
+  },
+  {
+    "symbol": "MED",
+    "name": "MediCare Ltd",
+    "price": 130,
+    "history": [130],
+    "holdings": { "Mark": 0, "Jojo": 0, "Toto": 0 }
+  },
+  {
+    "symbol": "BUILD",
+    "name": "BuildStrong",
+    "price": 70,
+    "history": [70],
+    "holdings": { "Mark": 0, "Jojo": 0, "Toto": 0 }
+  },
+  {
+    "symbol": "CLOTH",
+    "name": "Clothify",
+    "price": 60,
+    "history": [60],
+    "holdings": { "Mark": 0, "Jojo": 0, "Toto": 0 }
+  },
+  {
+    "symbol": "TRVL",
+    "name": "TravelNow",
+    "price": 95,
+    "history": [95],
+    "holdings": { "Mark": 0, "Jojo": 0, "Toto": 0 }
+  }
 ]
