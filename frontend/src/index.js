@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import logo from "./logo.png"; // Put logo.png in /frontend folder
+import logo from "./logo.png"; // Make sure logo.png is in src/
 import './index.css';
-import AdminShopManager from "./components/AdminShopManager";
-import Dashboard from "./components/Dashboard";
-import Login from "./components/Login";
-import MiniGames from "./components/MiniGames";
-import Shop from "./components/Shop";
-import StockMarket from "./components/StockMarket";
-import TaxSeasons from "./components/TaxSeasons";
-import TransactionHistory from "./components/TransactionHistory";
 
-
-const API = "https://safezone-final.onrender.com/api"; // Change this to deployed backend URL
+const API = "https://safezone-final.onrender.com/api"; // Change to your backend URL
 
 // Utility to format currency
 const formatCurrency = (num) => `$${num.toFixed(2)}`;
@@ -21,7 +12,6 @@ const formatCurrency = (num) => `$${num.toFixed(2)}`;
 function Login({ onLogin }) {
   const [selectedUser, setSelectedUser] = useState(null);
   const [code, setCode] = useState("");
-
   const users = ["Mark", "Jojo", "Toto"];
 
   const handleLoginClick = () => {
@@ -33,7 +23,7 @@ function Login({ onLogin }) {
   };
 
   return (
-    <div>
+    <div className="login-container">
       <h2>Login</h2>
       <div className="user-buttons">
         {users.map((u) => (
@@ -134,7 +124,7 @@ function Dashboard({ user, balance, centralBank, userStocks, transactions }) {
         <p>No stocks owned.</p>
       )}
       <h3>Recent Transactions:</h3>
-      <ul style={{maxHeight: "120px", overflowY: "auto"}}>
+      <ul style={{ maxHeight: "120px", overflowY: "auto" }}>
         {transactions.slice(-10).reverse().map((t, i) => (
           <li key={i}>
             [{t.date}] {t.username}: {t.type} {t.amount ? formatCurrency(t.amount) : ""} {t.details ? `(${t.details})` : ""}
@@ -203,7 +193,6 @@ function AdminShopManager({ username, secretCode, onRefresh }) {
   const [editName, setEditName] = useState("");
   const [editPrice, setEditPrice] = useState("");
   const [message, setMessage] = useState("");
-
   const authData = { username, secretCode };
 
   const fetchItems = async () => {
@@ -365,7 +354,6 @@ function StockMarket({ user, code }) {
   const [buyAmount, setBuyAmount] = useState("");
   const [userHoldings, setUserHoldings] = useState({});
   const [pricesUpdatedAt, setPricesUpdatedAt] = useState(null);
-
   const authData = { username: user.username, secretCode: code };
 
   // Fetch stocks and holdings
@@ -382,12 +370,7 @@ function StockMarket({ user, code }) {
 
   useEffect(() => {
     fetchStocks();
-
-    // Automatic update every 10 minutes
-    const interval = setInterval(() => {
-      fetchStocks();
-    }, 10 * 60 * 1000);
-
+    const interval = setInterval(fetchStocks, 10 * 60 * 1000); // 10 minutes
     return () => clearInterval(interval);
   }, []);
 
@@ -735,9 +718,6 @@ function MiniGames({ user, secretCode, onRefresh }) {
   const [message, setMessage] = useState("");
   const authData = { username: user.username, secretCode };
 
-  // Random prize 10-100$
-  const getRandomPrize = () => Math.floor(Math.random() * 91) + 10;
-
   const playGuessNumber = async () => {
     const numGuess = parseInt(guess, 10);
     if (isNaN(numGuess) || numGuess < 1 || numGuess > 10) {
@@ -774,8 +754,6 @@ function MiniGames({ user, secretCode, onRefresh }) {
         />
         <button onClick={playGuessNumber}>Play</button>
       </div>
-
-      {/* You can add more games similarly */}
     </section>
   );
 }
