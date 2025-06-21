@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SafeZone Bank</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="SafeZone Bank Logo" class="logo" />
+    <h1>SafeZone Bank</h1>
+  </header>
+
+  <main id="app">
+    <!-- Login screen -->
+    <section id="login-section" class="visible">
+      <h2>Login</h2>
+      <div id="user-buttons" class="user-buttons"></div>
+      <input type="password" id="secretCodeInput" placeholder="Enter secret code" maxlength="4" inputmode="numeric" />
+      <button id="loginBtn" disabled>Login</button>
+      <p id="loginMessage" class="message"></p>
+    </section>
+
+    <!-- Main app -->
+    <section id="main-section" class="hidden">
+
+      <nav id="main-nav">
+        <button data-page="dashboard" class="nav-btn active">Dashboard</button>
+        <button data-page="shop" class="nav-btn">Shop</button>
+        <button data-page="stocks" class="nav-btn">Stock Market</button>
+        <button data-page="games" class="nav-btn">Games</button>
+        <button data-page="settings" class="nav-btn">Settings</button>
+        <button id="logoutBtn" class="nav-btn logout">Logout</button>
+      </nav>
+
+      <section id="page-dashboard" class="page visible">
+        <h2>Dashboard</h2>
+        <div id="dashboard-content">
+          <!-- Admin or user specific dashboard content loads here -->
+        </div>
+      </section>
+
+      <section id="page-shop" class="page hidden">
+        <h2>Shop</h2>
+        <div id="shop-items"></div>
+        <div id="shop-order-message" class="message"></div>
+
+        <div id="shop-admin-controls" class="hidden">
+          <h3>Manage Shop Items</h3>
+          <form id="shop-add-form">
+            <input type="text" id="new-item-name" placeholder="Item name" required />
+            <input type="number" id="new-item-price" placeholder="Price ($)" min="0.01" step="0.01" required />
+            <button type="submit">Add Item</button>
+          </form>
+          <div id="shop-edit-list"></div>
+        </div>
+      </section>
+
+      <section id="page-stocks" class="page hidden">
+        <h2>Stock Market</h2>
+        <div id="stocks-list"></div>
+        <div id="stocks-message" class="message"></div>
+        <div id="stock-admin-controls" class="hidden">
+          <h3>Admin Stock Price Adjustment</h3>
+          <form id="stock-price-update-form">
+            <select id="stock-select"></select>
+            <input type="number" id="new-stock-price" min="1" step="0.01" placeholder="New price" required />
+            <button type="submit">Update Price</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="page-games" class="page hidden">
+        <h2>Mini Games</h2>
+        <div id="game-guessNumber">
+          <h3>Guess Number (1-5)</h3>
+          <input type="number" id="guessInput" min="1" max="5" placeholder="Enter your guess" />
+          <button id="playGuessBtn">Play</button>
+          <p id="game-result-message" class="message"></p>
+        </div>
+      </section>
+
+      <section id="page-settings" class="page hidden">
+        <h2>Settings</h2>
+        <div>
+          <h3>Change Secret Code</h3>
+          <input type="password" id="changeCodeInput" placeholder="New 4-digit code" maxlength="4" inputmode="numeric" />
+          <button id="changeCodeBtn" disabled>Change Code</button>
+          <p id="changeCodeMessage" class="message"></p>
+        </div>
+
+        <div id="admin-code-change-section" class="hidden">
+          <h3>Admin: Change User Secret Code</h3>
+          <select id="admin-user-select"></select>
+          <input type="password" id="adminNewCodeInput" placeholder="New 4-digit code" maxlength="4" inputmode="numeric" />
+          <button id="adminChangeCodeBtn" disabled>Change User Code</button>
+          <p id="adminChangeCodeMessage" class="message"></p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+<script src="index.js"></script>
+</body>
+</html>
